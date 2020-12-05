@@ -8,7 +8,7 @@ const geocode = require('./utils/geocode')
 const weathersvc = require('./utils/forecast')
 
 // Define paths for Express config
-console.log(path.join(__dirname, '../public'))
+//console.log(path.join(__dirname, '../public'))
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
