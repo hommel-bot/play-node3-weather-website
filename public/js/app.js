@@ -29,8 +29,9 @@ weatherForm.addEventListener('submit', (e) => {
             msg1.textContent = data.error
             //console.log(data.error)
         } else {
-            msg1.innerHTML = 'Location searched: ' + location + '<br>' + Date().toString()
-            msg2.innerHTML = 'Location found: ' + data.data.location + '<br>Temperature: ' + data.data.temperature + '&deg;C<br>Feels like: ' + data.data.feelslike + '&deg;C'
+            const s = '<br>Humidity: ' + data.data.humidity + '<br>Cloudcover: ' + data.data.cloudcover + '<br>Wind speed: ' + data.data.windspeed + '<br>Measurement time: ' + data.data.localtime + '<br>' + Date().toString()
+            msg1.innerHTML = 'Location searched: ' + location + '<br><img src="'+data.data.iconurl+'">'
+            msg2.innerHTML = 'Location found: ' + data.data.location + '<br>Description: ' + data.data.description + '<br>Temperature: ' + data.data.temperature + '&deg;C<br>Feels like: ' + data.data.feelslike + '&deg;C' + s
             console.log(data)
         //    console.log(data.data.temperature)
         //    console.log(data.data.location)

@@ -18,7 +18,13 @@ const forecast = (address, callback) => {
               temperature: body.current.temperature,
               feelslike: body.current.feelslike,
               humidity: body.current.humidity,
-              cloudcover: body.current.cloudcover
+              cloudcover: body.current.cloudcover,
+              windspeed: body.current.wind_speed,
+              winddir: body.current.wind_dir,
+              humidity: body.current.humidity,
+              pressure: body.current.pressure,
+              description: body.current.weather_descriptions, 
+              iconurl: body.current.weather_icons[0]
           })
       }
     })
